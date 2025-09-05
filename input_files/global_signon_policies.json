@@ -1,0 +1,89 @@
+{
+  "global_signon_policies": [
+    {
+      "name": "R&T Service_Account_Policy",
+      "description": "R&T Service Account Policy",
+      "status": "ACTIVE",
+      "groups_included": ["Service_Accounts"],
+      "priority": 1
+    },
+    {
+      "name": "R&T Administrator Policy",
+      "description": "R&T Administrator Policy",
+      "status": "ACTIVE",
+      "groups_included": ["Okta Administrators"],
+      "priority": 2
+    },
+    {
+      "name": "R&T Default Policy",
+      "description": "R&T Users Default Global Session Policy",
+      "status": "ACTIVE",
+      "groups_included": ["Everyone"],
+      "priority": 3
+    }
+  ],
+  "global_signon_policy_rules": [
+  
+    {
+      "name": "service_accounts_allow_from_internal_network",
+      "policy_name": "R&T Service_Account_Policy",
+      "status": "ACTIVE",
+      "primary_factor": "PASSWORD_IDP_ANY_FACTOR",
+      "session_lifetime": "15",
+      "session_idle": "5",
+      "network_connection": "ZONE",
+      "network_includes": ["RnT Owned Address Space"]
+
+    },
+    {
+      "name": "Deny_access_default",
+      "policy_name": "R&T Service_Account_Policy",
+      "status": "ACTIVE",
+      "primary_factor": "PASSWORD_IDP_ANY_FACTOR",
+      "network_connection": "ANYWHERE",
+      "access":"DENY"
+
+    },
+    {
+      "name": "okta_admins_allow_from_internal",
+      "policy_name": "R&T Administrator Policy",
+      "status": "ACTIVE",
+      "primary_factor": "PASSWORD_IDP_ANY_FACTOR",
+      "session_lifetime": "120",
+      "session_idle": "30",
+      "network_connection": "ZONE",
+      "network_includes": ["RnT Owned Address Space"]
+
+    },
+    {
+      "name": "Deny_access_default",
+      "policy_name": "R&T Administrator Policy",
+      "status": "ACTIVE",
+      "primary_factor": "PASSWORD_IDP_ANY_FACTOR",
+      "network_connection": "ANYWHERE",
+      "access":"DENY"
+
+    },
+    {
+      "name": "AMFA",
+      "policy_name": "R&T Administrator Policy",
+      "status": "ACTIVE",
+      "primary_factor": "PASSWORD_IDP_ANY_FACTOR",
+      "session_lifetime": "720",
+      "session_idle": "120",
+      "network_connection": "ANYWHERE",
+      "behaviors": ["New Country","New State","New Device","Velocity"],
+      "mfa_required": true,
+      "mfa_prompt": "ALWAYS"
+    },
+    {
+      "name": "R&T Default Rule",
+      "policy_name": "R&T Default Policy",
+      "status": "ACTIVE",
+      "primary_factor": "PASSWORD_IDP_ANY_FACTOR",
+      "session_lifetime": "720",
+      "session_idle": "120",
+      "network_connection": "ANYWHERE"
+    }
+  ]
+}

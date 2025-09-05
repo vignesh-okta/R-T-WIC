@@ -1,0 +1,46 @@
+{
+  "app_signon_policies": [
+    {
+      "name": "R&T Authentication Policy",
+      "description": "R&T Standard Login Policy"
+    }
+  ],
+  "app_signon_policy_rules": [
+    
+    {
+      "name": "R&T Employees Authentication Rule",
+      "policy_name": "R&T Authentication Policy",
+      "factor_mode": "2FA",
+      "access": "ALLOW",
+      "groups_included": [],
+      "network_connection": "ANYWHERE",
+      "network_includes": [],
+      "re_authentication_frequency": "PT43800H",
+      "priority": 1,
+      "constraints": [
+        {
+          "knowledge": {
+            "types": ["password"],
+            "reauthenticateIn": "PT43800H"
+          },
+          "possession": {
+            "deviceBound": "OPTIONAL",
+            "hardwareProtection": "OPTIONAL",
+            "phishingResistant": "OPTIONAL",
+            "userPresence": "OPTIONAL"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Catch All Deny Rule",
+      "policy_name": "R&T Authentication Policy",
+      "status": "ACTIVE",
+      "factor_mode": "2FA",
+      "access": "DENY",
+      "re_authentication_frequency": "PT0S",
+      "priority": 2,
+      "constraints": []
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "network_zones": [
+    {
+      "name": "Embargoed and Sanctioned List",
+      "type": "DYNAMIC_V2",
+      "usage": "BLOCKLIST",
+      "gateways": [],
+      "proxies": [],
+      "dynamic_locations": ["YE","IR","KP","VE","CU","GE","AF","BY","CN","AZ","ZW","RU","UA"],
+      "dynamic_proxy_type": "Any",
+      "asna": []
+    },
+    {
+      "name": "RnT Owned Address Space",
+      "type": "IP",
+      "gateways": [
+        "38.65.1.192/26",
+        "216.120.173.0/24",
+        "216.87.37.0/24",
+        "174.128.37.128/25",
+        "144.208.109.128/25",
+        "165.85.239.210"
+      ],
+      "proxies": [
+        "34.205.208.125-34.205.208.125",
+        "34.192.183.106-34.192.183.106",
+        "34.224.19.93-34.224.19.93",
+        "34.227.121.22-34.227.121.22"
+
+      ],
+      "dynamic_locations": []
+    }
+  ],
+  "Comment": "Country Codes for locations : https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 or Country with Region Codes : https://en.wikipedia.org/wiki/ISO_3166-2"
+}

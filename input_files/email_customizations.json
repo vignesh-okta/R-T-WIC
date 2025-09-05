@@ -1,0 +1,39 @@
+{
+  "email_customizations": [
+    {
+      "template_name": "UserActivation",
+      "language": "en",
+      "is_default": true,
+      "subject": "Welcome! Activate Your R&T Account to Get Started",
+      "force_is_default": "create,delete"
+    },
+    {
+      "template_name": "ForgotPassword",
+      "language": "en",
+      "is_default": true,
+      "subject": "Reset Your R&T Password",
+      "force_is_default": "create,delete"
+    },
+    {
+      "template_name": "PasswordResetByAdmin",
+      "language": "en",
+      "is_default": true,
+      "subject": "Your R&T Password Has Been Reset",
+      "force_is_default": "create,delete"
+    },
+    {
+      "template_name": "PasswordChanged",
+      "language": "en",
+      "is_default": true,
+      "subject": "Your R&T Password Has Been Successfully Changed",
+      "force_is_default": "create,delete"
+    },
+    {
+      "template_name": "UserBootstrappedActivation",
+      "language": "en",
+      "is_default": true,
+      "subject": "Welcome! Activate Your R&T Account to Get Started",
+      "force_is_default": "create,delete"
+    }
+  ]
+}

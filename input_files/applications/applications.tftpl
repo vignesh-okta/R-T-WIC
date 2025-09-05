@@ -1,0 +1,1 @@
+{"oauth" : [ %{ for filePath in fileset(appDirPath, pattern) ~}${file(filePath)},%{ endfor ~}]}

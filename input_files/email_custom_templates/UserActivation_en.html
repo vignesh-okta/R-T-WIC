@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+<div style="background-color: ${brand.theme.secondaryColor}; margin: 0">
+    <table style="font-family: 'Proxima Nova', 'Century Gothic', Arial, Verdana, sans-serif; font-size: 14px; color: #5e5e5e; width:98%; max-width: 600px; float: none; margin: 0 auto;" border="0" cellpadding="0" cellspacing="0" valign="top" align="middle">
+       <tr>
+  <td style="padding: 32px 0; text-align: center;">
+    <img src="${brand.theme.logo}" alt="R&T Deposit Solutions Logo" style="height: 60px;">
+  </td>
+</tr>
+
+        <tr bgcolor="#ffffff"><td>
+            <table bgcolor="#ffffff" style="width: 100%; line-height: 20px; padding: 32px; border: 1px solid; border-color: #f0f0f0;" cellpadding="0">
+                <tr>
+  <td style="text-align: center; padding: 16px 0; background-color: #ffffff;">
+    <span style="font-size: 24px; font-weight: bold; color: #333;">
+     Welcome to R&T One Identity!
+    </span>
+  </td>
+</tr>
+                <tr>
+                    <td style="padding-top: 24px; vertical-align: bottom;">
+                        Hi $!{StringTool.escapeHtml($!{user.profile.firstName})},
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 24px">
+                        Your organization is using One Identity to manage access to your web applications. This means you can conveniently access all the applications you normally use, through a single, secure home page. Watch this short video to learn more: <a href="https://www.okta.com/intro-to-okta/" style="color: #007dc1; text-decoration: none;"><span style="color: #007dc1; text-decoration: none;">https://www.okta.com/intro-to-okta/</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 24px;">
+                        Your system administrator has created a One Identity user account for you.<br/>
+                        <strong>Click the following link and follow the instructions on the subsequent screen to activate your One Identity account:</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table border="0" cellpadding="0" cellspacing="0" valign="top">
+                            <tr>
+                                <td align="center" style="height: 39px; padding-top: 24px; padding-bottom: 8px;"><a id="reset-password-link" href="${activationLink}" style="text-decoration: none;"><span style="display: block; padding: 9px 32px 7px 31px; border: 1px solid; text-align: center; cursor: pointer; color: #fff; border-radius: 3px; background-color: ${brand.theme.primaryColor}; border-color: ${brand.theme.primaryColor}; box-shadow: ${brand.theme.primaryColor} 0 1px 0;">Activate One Identity Account</span></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="color: #999;">
+                                    This link expires in ${f.formatTimeDiffHoursNowInUserLocale(${org.activationTokenExpirationHours})}.
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 24px;">
+                        Your username is <strong>${user.profile.login}</strong><br/>
+                        Your organization's sign-in page is <a href="${baseURL}" style="color: #007dc1; text-decoration: none;"><span style="color: #007dc1; text-decoration: none;">${baseURL}</span></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="padding-top: 24px;">
+                        If you experience difficulties accessing your account, you can send a help request to your system administrator using the link: <a href="${baseURL}/help/login" style="color: #007dc1; text-decoration: none;"><span style="color: #007dc1; text-decoration: none;">${baseURL}/help/login</span></a>
+                    </td>
+                </tr>
+            </table>
+        </td></tr>
+        <tr>
+            <td>
+                <table style="width: 100%; line-height: 20px; padding: 32px;" cellpadding="0">
+                    <tr>
+                        <td style="font-size: 12px; padding-top: 24px; color: #999;">
+                            This email was automatically sent by someone using <a href="https://www.okta.com" style="color:#616161">Okta's service</a>. Replies are not monitored or answered. Okta has no visibility over who receives these emails, and is not responsible for, and disclaims any and all liability associated with, this email's content. <br/><br/>The sender may have customized the contents of the email.
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[
+  {
+    "index": "adDN",
+    "title": "adDN",
+    "type": "string",
+    "array_type": null,
+    "description": "Active Directory Distinguished Name",
+    "required": false,
+    "master": "PROFILE_MASTER",
+    "permissions": "HIDE"
+  }
+]

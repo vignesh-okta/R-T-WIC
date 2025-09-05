@@ -1,0 +1,41 @@
+{
+  "label": "Custom_SAML_App",
+  "type": "saml",
+  "sso_url": "https://rnt.com/sso/saml",
+  "recipient": "https://rnt.com/sso/saml",
+  "destination": "https://rnt.com/sso/saml",
+  "audience": "https://rnt.com",
+  "subject_name_id_template": "$${user.userName}",
+  "subject_name_id_format": "urn:oasis:names:tc:SAML:2.0:nameid-format:persistent",
+  "response_signed": true,
+  "signature_algorithm": "RSA_SHA256",
+  "digest_algorithm": "SHA256",
+  "honor_force_authn": false,
+  "authn_context_class_ref": "urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport",
+  "implicit_assignment": true,
+  "attribute_statements": [{
+    "type": "EXPRESSION",
+    "name": "User.Email",
+    "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+    "values": ["user.email"]
+  },
+  {
+    "type": "EXPRESSION",
+    "name": "User.Username",
+    "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+    "values": ["user.email"]
+  },
+  {
+    "type": "EXPRESSION",
+    "name": "first_name",
+    "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+    "values": ["user.firstName"]
+  },
+  {
+    "type": "EXPRESSION",
+    "name": "last_name",
+    "namespace": "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified",
+    "values": ["user.lastName"]
+  }
+]
+}

@@ -1,0 +1,30 @@
+{
+    "groups": [
+      {
+        "name": "Org2Org Test Group",
+        "description": "Group for All Org2Org Test Users"
+      },
+      {
+        "name": "Service_Accounts",
+        "description": "Group for All Service Accounts"
+      },
+      {
+        "name": "AD_prov_users_employee",
+        "description": "Group for AD_prov_users_employee"
+      },
+      {
+        "name": "AD_prov_users_vendors_caylent",
+        "description": "Group for AD_prov_users_vendors_caylent"
+      },
+      {
+        "name": "AD_prov_users_vendors_other",
+        "description": "Group for AD_prov_users_vendors_other"
+      },
+      {
+        "name": "AD_Service_Account",
+        "description": "Group for AD_Service_Account"
+      }
+      
+    ]
+  }
+  

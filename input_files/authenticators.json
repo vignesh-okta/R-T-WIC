@@ -1,0 +1,19 @@
+{
+    "authenticators": [
+      
+      {
+        "name": "Password",
+        "key": "okta_password",
+        "status": "ACTIVE",
+        "settings": {},
+        "idp_factor": false
+      },
+      {
+        "name": "Security Key or Biometric",
+        "key": "webauthn",
+        "status": "ACTIVE",
+        "settings": {},
+        "idp_factor": false
+      }
+    ]
+  }

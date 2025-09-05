@@ -1,0 +1,24 @@
+{
+  "group_rules_map": [
+    {
+      "name": "AD_Service_Account",
+      "group_assignments": ["AD_Service_Account"],
+      "expression_value": "String.stringContains(user.adDN,\"OU=Service Accounts\")"
+    },
+    {
+      "name": "Service Account - SVC-  move rule",
+      "group_assignments": ["Service_Accounts"],
+      "expression_value": "String.startsWith(user.firstName,\"SVC_\")"
+    },
+    {
+      "name": "AD_prov_users_vendors_other",
+      "group_assignments": ["AD_prov_users_vendors_other"],
+      "expression_value": "String.startsWith(String.toLowerCase(user.userType),\"contractor\")"
+    },
+    {
+      "name": "AD_prov_users_employee",
+      "group_assignments": ["AD_prov_users_employee"],
+      "expression_value": "!String.startsWith(String.toLowerCase(user.userType),\"contractor\") && String.len(user.userType)>0"
+    }
+  ]
+}

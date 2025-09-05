@@ -1,0 +1,59 @@
+{
+  "authenticator_custom_enrollment_policies": [
+    
+    {
+      "name": "R&T Okta Admin Factor Policy",
+      "description": "Authenticator Enrollment policy for R&T Administrators",
+      "status": "ACTIVE",
+      "is_oie": true,
+      "priority": 1,
+      "groups_included": ["Okta Administrators"],
+      "okta_verify": { "enroll": "REQUIRED" },
+      "webauthn": { "enroll": "OPTIONAL" },
+      "okta_password": { "enroll": "REQUIRED" }
+    }
+
+  ],
+  "authenticator_custom_enrollment_policy_rules": [
+    
+    {
+      "name": "Enroll MFA for Admins from RnT Owned Networks Only",
+      "policy_name": "R&T Okta Admin Factor Policy",
+      "priority": 1,
+      "status": "ACTIVE",
+      "enroll": "LOGIN",
+      "network_connection": "ZONE",
+      "network_includes": ["RnT Owned Address Space"],
+      "network_excludes": []
+    },
+    {
+      "name": "Default Deny Rule",
+      "policy_name": "R&T Okta Admin Factor Policy",
+      "priority": 2,
+      "status": "ACTIVE",
+      "enroll": "NEVER",
+      "network_connection": "ANYWHERE",
+      "network_includes": [],
+      "network_excludes": []
+    }
+  ],
+  "authenticator_default_enrollment_policies": [
+    {
+      "name": "Default Policy",
+      "is_oie": true,
+      "okta_verify": { "enroll": "OPTIONAL" },
+      "webauthn": { "enroll": "NOT_ALLOWED" },
+      "okta_password": { "enroll": "REQUIRED" }
+    }
+  ],
+  "authenticator_default_enrollment_policy_rules": [
+    {
+      "priority": 1,
+      "status": "ACTIVE",
+      "enroll": "NEVER",
+      "network_connection": "ANYWHERE",
+      "network_includes": [],
+      "network_excludes": []
+    }
+  ]
+}

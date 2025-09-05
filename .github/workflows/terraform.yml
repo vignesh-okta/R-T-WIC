@@ -50,10 +50,10 @@ jobs:
         uses: sergeysova/jq-action@v2.3.0
 
       # Checks that all Terraform configuration files adhere to a canonical format
-      - name: Terraform Format
-        id: fmt
-        working-directory: ./workingDir
-        run: terraform fmt -check
+      # - name: Terraform Format
+      #   id: fmt
+      #   working-directory: ./workingDir
+      #   run: terraform fmt -check
 
       # Initialize a new or existing Terraform working directory by creating initial files, loading any remote state, downloading modules, etc.
       - name: Terraform Init

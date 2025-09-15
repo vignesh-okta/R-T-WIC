@@ -7,6 +7,12 @@ terraform {
       version = "~> 5.4.0"
     }
   }
+
+  backend "s3" {
+    bucket = "oktatf"
+    key    = "terraform.tfstate"
+    region = "us-west-2"
+  }
 }
 
 #Configure the Okta Provider

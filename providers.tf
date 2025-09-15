@@ -9,7 +9,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "oktatf"
+    bucket = "oktatfstate"
     key    = "terraform.tfstate"
     region = "us-west-2"
   }

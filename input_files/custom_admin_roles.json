@@ -66,7 +66,27 @@
         "okta.iam.read",
         "okta.support.cases.manage"
       ]
-    }
+    },
+    {
+    "label": "HelpDesk L2 Administrator",
+    "description": "Helpdesk elevated permissions to allow for user and group modifications",
+    "permissions": [
+        "okta.users.credentials.expirePassword",
+        "okta.users.lifecycle.suspend",
+        "okta.users.credentials.resetPassword",
+        "okta.users.credentials.enrollFactors",
+        "okta.users.credentials.resetFactors",
+        "okta.users.lifecycle.unsuspend",
+        "okta.groups.members.manage",
+        "okta.users.lifecycle.clearSessions",
+        "okta.users.read",
+        "okta.users.lifecycle.unlock",
+        "okta.groups.read",
+        "okta.users.appAssignment.manage",
+        "okta.users.groupMembership.manage",
+        "okta.users.lifecycle.activate"
+    ]
+}
   ],
   "resource_set": [
     {
@@ -75,6 +95,18 @@
       "resources": [
         {
           "type": "app"
+        }
+      ]
+    },
+    {
+      "label": "All Users",
+      "description": "All Users",
+      "resources": [
+        {
+          "type": "users"
+        },
+        {
+          "type": "groups"
         }
       ]
     }

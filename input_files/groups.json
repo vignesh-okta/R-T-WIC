@@ -23,6 +23,10 @@
       {
         "name": "AD_Service_Account",
         "description": "Group for AD_Service_Account"
+      },
+      {
+        "name": "All_R&T_Users",
+        "description": "Group for all Employees and Contractors"
       }
       
     ]

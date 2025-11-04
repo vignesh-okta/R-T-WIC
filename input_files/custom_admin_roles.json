@@ -103,10 +103,10 @@
       "description": "All Users",
       "resources": [
         {
-          "type": "users_in_group"
+          "type": "all_users"
         },
         {
-          "type": "group"
+          "type": "all_groups"
         }
       ]
     }

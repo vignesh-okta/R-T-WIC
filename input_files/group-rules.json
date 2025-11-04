@@ -19,6 +19,11 @@
       "name": "AD_prov_users_employee",
       "group_assignments": ["AD_prov_users_employee"],
       "expression_value": "!String.startsWith(String.toLowerCase(user.userType),\"contractor\") && String.len(user.userType)>0"
+    },
+    {
+      "name": "All_R&T_Users",
+      "group_assignments": ["All_R&T_Users"],
+      "expression_value": "String.len(user.employeeNumber)>0"
     }
   ]
 }

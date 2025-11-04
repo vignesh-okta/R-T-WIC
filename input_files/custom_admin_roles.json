@@ -103,7 +103,7 @@
       "description": "All Users",
       "resources": [
         {
-          "type": "users_in_group"
+          "type": "users_in_group",
           "name": "All_R&T_Users"
         },
         {

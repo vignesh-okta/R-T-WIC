@@ -8,5 +8,15 @@
     "required": false,
     "master": "PROFILE_MASTER",
     "permissions": "HIDE"
+  },
+  {
+    "index": "rntID",
+    "title": "R&T ID",
+    "type": "string",
+    "array_type": null,
+    "description": "R&T ID",
+    "required": false,
+    "master": "PROFILE_MASTER",
+    "permissions": "HIDE"
   }
 ]

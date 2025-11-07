@@ -42,7 +42,7 @@
       "name": "Default Policy",
       "is_oie": true,
       "okta_verify": { "enroll": "OPTIONAL" },
-      "webauthn": { "enroll": "NOT_ALLOWED" },
+      "security_question": { "enroll": "REQUIRED" },
       "okta_password": { "enroll": "REQUIRED" }
     }
   ],
